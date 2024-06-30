@@ -6,11 +6,15 @@
     // Scroll to Bottom
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
-            $('.scroll-to-bottom').fadeOut('slow');
+            $('.scroll-bottom-container').fadeOut('slow');
         } else {
-            $('.scroll-to-bottom').fadeIn('slow');
+            $('.scroll-bottom-container').fadeIn('slow');
         }
     });
+
+    $('.scroll-bottom-container').click(function() {
+        $('html, body').animate({ scrollTop: $("#about").offset().top }, 1500, 'easeInOutExpo');
+    })
 
 
     // Portfolio isotope and filter
@@ -45,7 +49,7 @@
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
-        autoplay: false,
+        autoplay: true,
         smartSpeed: 1500,
         dots: false,
         loop: true,
