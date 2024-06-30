@@ -26,16 +26,19 @@
     });
 
 
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.back-to-top').fadeIn('slow');
+    // play
+    $('.play-music').click(function () {
+        const element = $(this).find('.icon')
+
+        const audio = document.getElementById("music");
+
+        if (element.hasClass('fa-play')) {
+            audio.volume = 0.2;
+            audio.play()
         } else {
-            $('.back-to-top').fadeOut('slow');
+            audio.pause()
         }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        element.toggleClass('fa-pause').toggleClass('fa-play')
         return false;
     });
 
@@ -70,8 +73,7 @@
         }
     });
 
-    const audio = document.getElementById("music");
-    audio.volume = 0.2;
+
 
 })(jQuery);
 

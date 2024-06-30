@@ -172,8 +172,7 @@ a {
 }
 
 a:hover {
-  color: #af5617;
-  text-decoration: underline;
+  color: #ea2b65;
 }
 
 a:not([href]):not([class]) {
@@ -10682,14 +10681,18 @@ a.text-dark:focus {
   animation: action 1s infinite alternate;
 }
 
-.back-to-top {
+.play-music {
   position: fixed;
-  display: none;
   text-align: center;
   right: 30px;
   bottom: 30px;
   z-index: 11;
-  animation: action 1s infinite alternate;
+  border-radius: 50%;
+  font-size: 16px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* animation: action 1s infinite alternate; */
 }
 
 @keyframes action {
@@ -10972,8 +10975,9 @@ a.text-dark:focus {
 
 .person-image {
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 25px;
 }
 
 #about {
@@ -10987,4 +10991,21 @@ a.text-dark:focus {
   .reverse-in-mobile {
     flex-direction: column-reverse;
   }
+}
+
+.story-image {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.event-image {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
 }
