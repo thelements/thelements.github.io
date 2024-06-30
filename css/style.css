@@ -10933,6 +10933,7 @@ a.text-dark:focus {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/gallery.jpg), no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 .gallery-carousel .owl-nav {
